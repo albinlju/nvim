@@ -4,6 +4,7 @@
 -- * add extra plugins
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
+vim.filetype.add({ extension = { templ = "templ" } })
 return {
 
   -- Configure LazyVim to load gruvbox

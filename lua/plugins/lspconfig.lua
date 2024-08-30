@@ -32,6 +32,19 @@ return {
       servers = {
         -- tsserver will be automatically installed with mason and loaded with lspconfig
         tsserver = {},
+        html = {
+          filetypes = { "html", "templ" },
+          settings = {
+            html = {
+              format = {
+                templating = true,
+                wrapLineLength = 300,
+                wrapAttributes = "auto",
+              },
+            },
+          },
+        },
+
         gopls = {
           settings = {
             gopls = {
@@ -64,6 +77,7 @@ return {
         html = function(server, opts) end,
         -- Specify * to use this function as a fallback for any server
         -- ["*"] = function(server, opts) end,
+        --
       },
     },
   },
